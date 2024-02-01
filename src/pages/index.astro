@@ -1,0 +1,31 @@
+---
+import Layout from "../layouts/Layout.astro";
+import Hero from "../components/Sections/Hero.astro";
+import About from "../components/Sections/About.astro";
+import Education from "../components/Sections/Education.astro";
+import Experience from "../components/Sections/Experience.astro";
+import Projects from "../components/Sections/Projects.astro";
+import Skills from "../components/Sections/Skills.astro";
+
+import { basics } from "../../cv.json";
+const { name, label } = basics;
+---
+
+<Layout title={`Portafolio de ${name} - ${label}`}>
+  <main>
+    <Hero />
+    <About />
+    <Experience />
+    <Education />
+    <Skills />
+    <Projects />
+  </main>
+</Layout>
+
+<style>
+  main {
+    padding: 4rem;
+    margin: auto;
+    width: 100%;
+  }
+</style>

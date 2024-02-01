@@ -1,0 +1,193 @@
+{
+  "basics": {
+    "name": "Adrian Martínez González",
+    "label": "Full Stack Developer con más de 1 año de experiencia en el mundo del desarrollo web.",
+    "image": "./avatar.jpg",
+    "email": "adrianmg3008@gmail.com",
+    "phone": "+53 54110593",
+    "url": "https://github.com/aDogdev",
+    "summary": "Apasionado del mundo de la programación e Ingeniero en Ciencias Informáticas. Actualmente vivo en Mayabeque, Cuba. He liderado diferentes proyectos escolares, los cuales me han aportado valiosas experiencias a mi ruta como desarrollador.",
+    "location": {
+      "address": "3122A e/ 31 y Final",
+      "postalCode": "CA 94115",
+      "city": "Quivicán",
+      "countryCode": "CU",
+      "region": "Mayabeque"
+    },
+    "profiles": [
+      {
+        "network": "GitHub",
+        "username": "aDogdev",
+        "url": "https://github.com/aDogdev"
+      },
+      {
+        "network": "LinkedIn",
+        "username": "adogdev",
+        "url": "https://linkedin.com/in/adogdev"
+      },
+      {
+        "network": "X",
+        "username": "aDogdev",
+        "url": "https://x.com/aDogdev"
+      }
+    ]
+  },
+  "work": [
+    {
+      "name": "Universidad de las Ciencias Informáticas",
+      "position": "Desarrollador",
+      "url": "https://uci.cu",
+      "startDate": "2022-09",
+      "endDate": "2023-11",
+      "summary": "Creación de un módulo que gestiona los hechos extraordinarios para el Componente de Suministro de la empresa TECNOTEX.",
+      "highlights": []
+    },
+    {
+      "name": "Freelancer",
+      "position": "Desarrollador de software",
+      "url": "",
+      "startDate": "2024-02",
+      "endDate": null,
+      "summary": "Brindo mis servicios como programador, para desarrollar aplicaciones y sitios webs a medida del cliente.",
+      "highlights": []
+    }
+  ],
+  "volunteer": [
+    {
+      "organization": "Organization",
+      "position": "Volunteer",
+      "url": "https://organization.com/",
+      "startDate": "2012-01-01",
+      "endDate": "2013-01-01",
+      "summary": "Description…",
+      "highlights": ["Awarded 'Volunteer of the Month'"]
+    }
+  ],
+  "education": [
+    {
+      "institution": "Universidad de las Ciencias Informáticas",
+      "url": "https://uci.cu",
+      "area": "Ingeniería en Ciencias Informáticas",
+      "studyType": "Ingeniería",
+      "startDate": "2018-09",
+      "endDate": "2023-12",
+      "score": "4.6",
+      "courses": ["DB1101 - Basic SQL"]
+    }
+  ],
+  "awards": [
+    {
+      "title": "Award",
+      "date": "2014-11-01",
+      "awarder": "Company",
+      "summary": "There is no spoon."
+    }
+  ],
+  "certificates": [
+    {
+      "name": "Certificate",
+      "date": "2021-11-07",
+      "issuer": "Company",
+      "url": "https://certificate.com"
+    }
+  ],
+  "publications": [
+    {
+      "name": "Publication",
+      "publisher": "Company",
+      "releaseDate": "2014-10-01",
+      "url": "https://publication.com",
+      "summary": "Description…"
+    }
+  ],
+  "skills": [
+    {
+      "name": "HTML",
+      "level": "Master",
+      "keywords": ["HTML", "CSS", "JavaScript"]
+    },
+    {
+      "name": "CSS",
+      "level": "Master",
+      "keywords": ["HTML", "CSS", "JavaScript"]
+    },
+    {
+      "name": "JavaScript",
+      "level": "Master",
+      "keywords": ["HTML", "CSS", "JavaScript"]
+    },
+    {
+      "name": "Node",
+      "level": "Master",
+      "keywords": ["HTML", "CSS", "JavaScript"]
+    },
+    {
+      "name": "Git",
+      "level": "Master",
+      "keywords": ["HTML", "CSS", "JavaScript"]
+    },
+    {
+      "name": "React",
+      "level": "Master",
+      "keywords": ["HTML", "CSS", "JavaScript"]
+    }
+  ],
+  "languages": [
+    {
+      "language": "Español",
+      "fluency": "Nativo"
+    },
+    {
+      "language": "Inglés",
+      "fluency": "A1"
+    }
+  ],
+  "interests": [
+    {
+      "name": "Wildlife",
+      "keywords": ["Ferrets", "Unicorns"]
+    }
+  ],
+  "references": [
+    {
+      "name": "Jane Doe",
+      "reference": "Reference…"
+    }
+  ],
+  "projects": [
+    {
+      "name": "Modulo de Gestión de Hechos Extraordinarios",
+      "isActive": false,
+      "startDate": "2019-01-01",
+      "endDate": "2021-01-01",
+      "description": "Módulo que gestiona los hechos extraordinarios relacionados con mercancía en la empresa TECNOTEX.",
+      "highlights": [
+        "Trabajo final de curso",
+        "5 puntos de calificación"
+      ]
+    },
+    {
+      "name": "Sistema de Gestión Académico",
+      "isActive": false,
+      "startDate": "2019-01-01",
+      "endDate": "2021-01-01",
+      "description": "Desarrollo de un sistema web para gestionar estudiantes y profesores en una institución académica.",
+      "highlights": [
+        "Proyecto final de 4to año de carrera",
+        "5 puntos de calificación"
+      ],
+      "url": "https://github.com/luismdp05/sistema-gestion-academica"
+    },
+    {
+      "name": "React Tasks App",
+      "isActive": true,
+      "startDate": "2019-01-01",
+      "endDate": "2021-01-01",
+      "description": "Sitio web para gestionar tareas.",
+      "highlights": [
+        "En desarrollo"
+      ],
+      "url": "https://project.com/"
+    }
+  ]
+}

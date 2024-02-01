@@ -1,0 +1,86 @@
+---
+import { work } from "../../../cv.json";
+import Section from "../Section.astro";
+---
+
+<Section title="Experiencia laboral">
+  <ul>
+    {
+      work.map(
+        ({ name, startDate, endDate, position, summary, highlights }) => {
+          const startYear = new Date(startDate).getFullYear();
+          const endYear =
+            endDate !== null ? new Date(endDate).getFullYear() : "Actual";
+          const years = `${startYear} - ${endYear}`;
+
+          return (
+            <li>
+              <article>
+                <header>
+                  <div>
+                    <h3>{name}</h3>
+                    <h4>{position}</h4>
+                  </div>
+
+                  <time>{years}</time>
+                </header>
+
+                <footer>
+                  <p>{summary}</p>
+                  {highlights.map((highlight) => {
+                    return <span>{highlight}</span>;
+                  })}
+                </footer>
+              </article>
+            </li>
+          );
+        }
+      )
+    }
+  </ul>
+</Section>
+
+<style>
+  ul {
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+  }
+
+  article h3 {
+    font-weight: 500;
+    color: #111;
+  }
+
+  article h4 {
+    font-weight: 400;
+    color: #222;
+  }
+
+  header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 4px;
+  }
+
+  time {
+    font-size: 0.85rem;
+    color: #555;
+  }
+
+  footer {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 4px;
+  }
+
+  footer span {
+    border-radius: 6px;
+    background: #eee;
+    color: #333;
+    font-size: 0.7rem;
+    font-weight: 500;
+    padding: 0.2rem 0.6rem;
+  }
+</style>
