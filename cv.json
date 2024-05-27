@@ -139,6 +139,16 @@
       "name": "React",
       "level": "Master",
       "keywords": ["HTML", "CSS", "JavaScript"]
+    },
+    {
+      "name": "Python",
+      "level": "Master",
+      "keywords": []
+    },
+    {
+      "name": "Odoo",
+      "level": "Master",
+      "keywords": []
     }
   ],
   "languages": [
