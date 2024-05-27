@@ -34,15 +34,6 @@
   },
   "work": [
     {
-      "name": "Merchise",
-      "position": "Desarrollador",
-      "url": "https://www.merchise.org",
-      "startDate": "2024-03",
-      "endDate": null,
-      "summary": "",
-      "highlights": []
-    },
-    {
       "name": "Universidad de las Ciencias Informáticas",
       "position": "Desarrollador",
       "url": "https://uci.cu",
@@ -58,6 +49,15 @@
       "startDate": "2024-02",
       "endDate": null,
       "summary": "Brindo mis servicios como programador, para desarrollar aplicaciones y sitios webs a medida del cliente.",
+      "highlights": []
+    },
+    {
+      "name": "Merchise",
+      "position": "Desarrollador",
+      "url": "https://www.merchise.org",
+      "startDate": "2024-03",
+      "endDate": null,
+      "summary": "",
       "highlights": []
     }
   ],
