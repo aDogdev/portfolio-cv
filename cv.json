@@ -34,6 +34,15 @@
   },
   "work": [
     {
+      "name": "Merchise",
+      "position": "Desarrollador",
+      "url": "https://www.merchise.org",
+      "startDate": "2024-03",
+      "endDate": null,
+      "summary": "",
+      "highlights": []
+    },
+    {
       "name": "Universidad de las Ciencias Informáticas",
       "position": "Desarrollador",
       "url": "https://uci.cu",
