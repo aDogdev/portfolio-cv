@@ -1,18 +1,18 @@
 {
   "basics": {
     "name": "Adrian Martínez",
-    "label": "Full Stack Developer con más de 1 año de experiencia en el mundo del desarrollo web.",
+    "label": "Ingeniero en Ciencias Informáticas con más de 2 años de experiencia en desarrollo Full Stack.",
     "image": "./avatar.jpg",
     "email": "adrianmg3008@gmail.com",
     "phone": "+53 54110593",
     "url": "https://github.com/aDogdev",
-    "summary": "Apasionado del mundo de la programación e Ingeniero en Ciencias Informáticas. Actualmente vivo en Mayabeque, Cuba. He liderado diferentes proyectos escolares, los cuales me han aportado valiosas experiencias a mi ruta como desarrollador.",
+    "summary": "Actualmente trabajo como desarrollador en Merchise, donde participo en la creación de soluciones tecnológicas utilizando Python. Especializado en el desarrollo de aplicaciones web escalables, he colaborado en proyectos profesionales implementando buenas prácticas de desarrollo y trabajando en equipos ágiles. Comprometido con el aprendizaje continuo y la mejora de procesos tecnológicos, buscando siempre optimizar resultados a través de soluciones innovadoras.",
     "location": {
       "address": "3122A e/ 31 y Final",
       "postalCode": "CA 94115",
-      "city": "Quivicán",
+      "city": "Marianao",
       "countryCode": "CU",
-      "region": "Mayabeque"
+      "region": "La Habana"
     },
     "profiles": [
       {
