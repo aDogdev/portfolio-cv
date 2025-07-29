@@ -111,6 +111,26 @@
   ],
   "skills": [
     {
+      "name": "Nodejs",
+      "level": "Master",
+      "keywords": ["HTML", "CSS", "JavaScript"]
+    },
+    {
+      "name": "Expressjs",
+      "level": "Master",
+      "keywords": ["HTML", "CSS", "JavaScript"]
+    },
+    {
+      "name": "JavaScript",
+      "level": "Master",
+      "keywords": ["HTML", "CSS", "JavaScript"]
+    },
+    {
+      "name": "TypeScript",
+      "level": "Master",
+      "keywords": ["HTML", "CSS", "JavaScript"]
+    },
+    {
       "name": "HTML",
       "level": "Master",
       "keywords": ["HTML", "CSS", "JavaScript"]
@@ -121,17 +141,17 @@
       "keywords": ["HTML", "CSS", "JavaScript"]
     },
     {
-      "name": "JavaScript",
-      "level": "Master",
-      "keywords": ["HTML", "CSS", "JavaScript"]
-    },
-    {
-      "name": "Node",
+      "name": "Tailwind",
       "level": "Master",
       "keywords": ["HTML", "CSS", "JavaScript"]
     },
     {
       "name": "Git",
+      "level": "Master",
+      "keywords": ["HTML", "CSS", "JavaScript"]
+    },
+    {
+      "name": "Docker",
       "level": "Master",
       "keywords": ["HTML", "CSS", "JavaScript"]
     },
