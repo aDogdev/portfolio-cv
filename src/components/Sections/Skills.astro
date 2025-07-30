@@ -6,11 +6,11 @@ import "../../styles/skills.css";
 
 <Section title="Skills">
   <div class="skills">
-    <ul>
+    <ul class="skills-list inline-flex gap-2 flex-wrap">
       {
         skills.map(({ name }) => {
           return (
-            <li>
+            <li class="skills-item rounded-md bg-gray-100 text-black text-sm font-medium px-2 py-1">
               <span>{name}</span>
             </li>
           );

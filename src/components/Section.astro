@@ -3,7 +3,11 @@ const { title } = Astro.props;
 import "../styles/section.css";
 ---
 
-<section class="section">
-  {title && <h2>{title}</h2>}
+<section class="section max-w-[700px] mx-auto mb-12">
+  {
+    title && (
+      <h2 class="section-title mb-2 font-bold leading-6 text-2xl">{title}</h2>
+    )
+  }
   <slot />
 </section>

@@ -6,7 +6,7 @@ import "../../styles/experience.css";
 
 <Section title="Work Experience">
   <div class="experience">
-    <ul>
+    <ul class="experience-list flex flex-col gap-8">
       {
         work.map(
           ({ name, startDate, endDate, position, summary, highlights }) => {
@@ -18,19 +18,25 @@ import "../../styles/experience.css";
             return (
               <li>
                 <article>
-                  <header>
+                  <header class="experience-header flex justify-between items-start mb-1">
                     <div>
-                      <h3>{name}</h3>
-                      <h4>{position}</h4>
+                      <h3 class="experience-company font-medium">{name}</h3>
+                      <h4 class="experience-position font-normal">
+                        {position}
+                      </h4>
                     </div>
 
-                    <time>{years}</time>
+                    <time class="experience-time text-sm">{years}</time>
                   </header>
 
-                  <footer>
+                  <footer class="experience-footer flex flex-wrap gap-1">
                     <p>{summary}</p>
                     {highlights.map((highlight) => {
-                      return <span>{highlight}</span>;
+                      return (
+                        <span class="experience-highlight rounded-md bg-gray-100 text-gray-700 text-xs font-medium px-2 py-1">
+                          {highlight}
+                        </span>
+                      );
                     })}
                   </footer>
                 </article>

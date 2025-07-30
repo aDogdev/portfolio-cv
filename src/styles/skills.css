@@ -1,14 +1,4 @@
-.skills ul {
-  display: inline-flex;
-  gap: 8px;
-  flex-wrap: wrap;
-}
-
-.skills li {
-  border-radius: 6px;
-  background: #eee;
-  color: black;
-  font-size: 0.8rem;
-  font-weight: 500;
-  padding: 0.2rem 0.6rem;
+/* Skills component styles - only colors */
+.skills-item {
+  /* Background and text colors are now handled by Tailwind classes */
 }

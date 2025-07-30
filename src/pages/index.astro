@@ -6,14 +6,13 @@ import Education from "../components/Sections/Education.astro";
 import Experience from "../components/Sections/Experience.astro";
 import Projects from "../components/Sections/Projects.astro";
 import Skills from "../components/Sections/Skills.astro";
-import "../styles/main.css";
 
 import { basics } from "../../cv.json";
 const { name, label } = basics;
 ---
 
 <Layout title={`Portfolio of ${name} - ${label}`}>
-  <main>
+  <main class="p-16 mx-auto w-full">
     <Hero />
     <About />
     <Experience />

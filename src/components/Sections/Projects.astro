@@ -6,31 +6,42 @@ import "../../styles/projects.css";
 
 <Section title="Projects">
   <div class="projects">
-    <ul>
+    <ul
+      class="projects-grid grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 -mx-4"
+    >
       {
         projects.map(({ name, description, url, highlights, isActive }) => {
           return (
             <li>
-              <article>
-                <header>
-                  <h3>
+              <article class="projects-card rounded-lg border border-gray-100 flex flex-col gap-4 p-4 h-full">
+                <header class="projects-header flex-1">
+                  <h3 class="projects-title mb-1">
                     <a
                       href={url}
                       title={`View the project ${name}`}
                       target="_blank"
                       rel="noopener noreferrer"
+                      class="projects-link text-gray-900 hover:underline"
                     >
                       {name}
                     </a>
 
-                    {isActive && <span>&bull;</span>}
+                    {isActive && (
+                      <span class="projects-active text-lime-500">&bull;</span>
+                    )}
                   </h3>
-                  <p>{description}</p>
+                  <p class="projects-description text-xs leading-5 mb-1">
+                    {description}
+                  </p>
                 </header>
 
-                <footer>
+                <footer class="projects-footer flex flex-wrap gap-1">
                   {highlights.map((highlight) => {
-                    return <span>{highlight}</span>;
+                    return (
+                      <span class="projects-highlight rounded-md bg-gray-100 text-gray-700 text-xs font-medium px-2 py-1">
+                        {highlight}
+                      </span>
+                    );
                   })}
                 </footer>
               </article>

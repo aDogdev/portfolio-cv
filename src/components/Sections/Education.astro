@@ -6,7 +6,7 @@ import "../../styles/education.css";
 
 <Section title="Education">
   <div class="education">
-    <ul>
+    <ul class="education-list flex flex-col gap-8">
       {
         education.map(
           ({ institution, startDate, endDate, studyType, score }) => {
@@ -18,18 +18,21 @@ import "../../styles/education.css";
             return (
               <li>
                 <article>
-                  <header>
+                  <header class="education-header flex justify-between items-start mb-1">
                     <div>
-                      <h3>{institution}</h3>
-                      <h4>{studyType}</h4>
+                      <h3 class="education-institution font-medium">
+                        {institution}
+                      </h3>
+                      <h4 class="education-type font-normal">{studyType}</h4>
                     </div>
 
-                    <time>{years}</time>
+                    <time class="education-time text-sm">{years}</time>
                   </header>
 
                   <footer>
                     <p>
-                      Grades: <span>{score}</span>
+                      Grades:{" "}
+                      <span class="education-score text-lime-500">{score}</span>
                     </p>
                   </footer>
                 </article>

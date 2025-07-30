@@ -24,18 +24,20 @@ const printInfo = [email, phone, linkedUrl].filter(Boolean).join(" • ");
 ---
 
 <Section>
-  <div class="container">
-    <div class="info">
-      <h1>{name}</h1>
-      <h2>{label}</h2>
-      <span>
+  <div class="hero-container flex flex-row items-center justify-between gap-4">
+    <div class="hero-info flex flex-col gap-2 pr-8">
+      <h1 class="hero-name text-3xl">{name}</h1>
+      <h2 class="hero-label text-lg font-medium text-balance">{label}</h2>
+      <span
+        class="hero-location flex items-center gap-1 text-sm tracking-tight"
+      >
         <WorldMap />
         {city}, {region}
       </span>
-      <footer class="print">
+      <footer class="hero-print hidden print:block text-xs mt-2">
         {printInfo}
       </footer>
-      <footer class="no-print">
+      <footer class="hero-social flex gap-1 mt-2 text-xs print:hidden">
         {
           email && (
             <a
@@ -43,6 +45,7 @@ const printInfo = [email, phone, linkedUrl].filter(Boolean).join(" • ");
               title={`Send an email to ${name} at ${email}`}
               target="_blank"
               rel="noopener noreferrer"
+              class="hero-social-link inline-flex items-center justify-center p-1 h-8 w-8 rounded-md"
             >
               <Mail />
             </a>
@@ -55,6 +58,7 @@ const printInfo = [email, phone, linkedUrl].filter(Boolean).join(" • ");
               title={`Call ${name} at ${phone}`}
               target="_blank"
               rel="noopener noreferrer"
+              class="hero-social-link inline-flex items-center justify-center p-1 h-8 w-8 rounded-md"
             >
               <Phone />
             </a>
@@ -70,6 +74,7 @@ const printInfo = [email, phone, linkedUrl].filter(Boolean).join(" • ");
                 title={`Visit ${name}'s profile on ${network}`}
                 target="_blank"
                 rel="noopener noreferrer"
+                class="hero-social-link inline-flex items-center justify-center p-1 h-8 w-8 rounded-md"
               >
                 <Icon />
               </a>
@@ -78,8 +83,12 @@ const printInfo = [email, phone, linkedUrl].filter(Boolean).join(" • ");
         }
       </footer>
     </div>
-    <figure>
-      <img src={image} alt={name} />
+    <figure class="hero-avatar">
+      <img
+        src={image}
+        alt={name}
+        class="hero-image aspect-square object-cover w-32 rounded-full"
+      />
     </figure>
   </div>
 </Section>
