@@ -39,7 +39,7 @@ const printInfo = [email, phone, linkedUrl].filter(Boolean).join(" • ");
           email && (
             <a
               href={`mailto:${email}`}
-              title={`Enviar un correo electrónico a ${name} al correo ${email}`}
+              title={`Send an email to ${name} at ${email}`}
               target="_blank"
               rel="noopener noreferrer"
             >
@@ -51,7 +51,7 @@ const printInfo = [email, phone, linkedUrl].filter(Boolean).join(" • ");
           phone && (
             <a
               href={`tel:${phone}`}
-              title={`Llamar por teléfono a ${name} al número ${phone}`}
+              title={`Call ${name} at ${phone}`}
               target="_blank"
               rel="noopener noreferrer"
             >
@@ -66,7 +66,7 @@ const printInfo = [email, phone, linkedUrl].filter(Boolean).join(" • ");
             return (
               <a
                 href={url}
-                title={`Visitar el perfil de ${name} en ${network}`}
+                title={`Visit ${name}'s profile on ${network}`}
                 target="_blank"
                 rel="noopener noreferrer"
               >
@@ -130,7 +130,7 @@ const printInfo = [email, phone, linkedUrl].filter(Boolean).join(" • ");
     display: flex;
     gap: 4px;
     margin-top: 8px;
-    font-size: .6rem;
+    font-size: 0.6rem;
     color: #555;
   }
 

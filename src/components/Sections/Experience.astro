@@ -3,14 +3,14 @@ import { work } from "../../../cv.json";
 import Section from "../Section.astro";
 ---
 
-<Section title="Experiencia laboral">
+<Section title="Work Experience">
   <ul>
     {
       work.map(
         ({ name, startDate, endDate, position, summary, highlights }) => {
           const startYear = new Date(startDate).getFullYear();
           const endYear =
-            endDate !== null ? new Date(endDate).getFullYear() : "Actual";
+            endDate !== null ? new Date(endDate).getFullYear() : "Present";
           const years = `${startYear} - ${endYear}`;
 
           return (

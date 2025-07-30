@@ -3,13 +3,13 @@ import { education } from "../../../cv.json";
 import Section from "../Section.astro";
 ---
 
-<Section title="Educación">
+<Section title="Education">
   <ul>
     {
       education.map(({ institution, startDate, endDate, studyType, score }) => {
         const startYear = new Date(startDate).getFullYear();
         const endYear =
-          endDate !== null ? new Date(endDate).getFullYear() : "Actual";
+          endDate !== null ? new Date(endDate).getFullYear() : "Present";
         const years = `${startYear} - ${endYear}`;
 
         return (
@@ -26,7 +26,7 @@ import Section from "../Section.astro";
 
               <footer>
                 <p>
-                  Notas: <span>{score}</span>
+                  Grades: <span>{score}</span>
                 </p>
               </footer>
             </article>

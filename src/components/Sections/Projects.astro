@@ -3,7 +3,7 @@ import { projects } from "../../../cv.json";
 import Section from "../Section.astro";
 ---
 
-<Section title="Proyectos">
+<Section title="Projects">
   <ul>
     {
       projects.map(({ name, description, url, highlights, isActive }) => {
@@ -14,7 +14,7 @@ import Section from "../Section.astro";
                 <h3>
                   <a
                     href={url}
-                    title={`Ver el proyecto ${name}`}
+                    title={`View the project ${name}`}
                     target="_blank"
                     rel="noopener noreferrer"
                   >
