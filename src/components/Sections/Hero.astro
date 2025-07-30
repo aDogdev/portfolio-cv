@@ -7,6 +7,7 @@ import GitHub from "../../icons/GitHub.astro";
 import X from "../../icons/X.astro";
 import WorldMap from "../../icons/WorldMap.astro";
 import LinkedIn from "../../icons/LinkedIn.astro";
+import "../../styles/hero.css";
 
 const { name, label, image, location, profiles, phone, email } = basics;
 const { city, region } = location;
@@ -82,73 +83,3 @@ const printInfo = [email, phone, linkedUrl].filter(Boolean).join(" • ");
     </figure>
   </div>
 </Section>
-
-<style>
-  .container {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: space-between;
-    gap: 1rem;
-  }
-
-  .info {
-    display: flex;
-    flex-direction: column;
-    gap: 0.5rem;
-    padding-right: 32px;
-  }
-
-  h1 {
-    font-size: 2rem;
-  }
-
-  h2 {
-    color: #444;
-    font-weight: 500;
-    font-size: 1.1rem;
-    text-wrap: balance;
-  }
-
-  img {
-    aspect-ratio: 1 / 1;
-    object-fit: cover;
-    width: 128px;
-    border-radius: 50%;
-  }
-
-  span {
-    color: #666;
-    display: flex;
-    align-items: center;
-    gap: 0.25rem;
-    font-size: 0.85rem;
-    letter-spacing: -0.05rem;
-  }
-
-  footer {
-    display: flex;
-    gap: 4px;
-    margin-top: 8px;
-    font-size: 0.6rem;
-    color: #555;
-  }
-
-  footer a {
-    color: #777;
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    border: 1px solid #eee;
-    padding: 4px;
-    height: 32px;
-    width: 32px;
-    border-radius: 6px;
-    transition: all 0.3s ease;
-  }
-
-  footer a:hover {
-    background: #eee;
-    border: 1px solid #ddd;
-  }
-</style>

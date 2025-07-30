@@ -6,6 +6,7 @@ import Education from "../components/Sections/Education.astro";
 import Experience from "../components/Sections/Experience.astro";
 import Projects from "../components/Sections/Projects.astro";
 import Skills from "../components/Sections/Skills.astro";
+import "../styles/main.css";
 
 import { basics } from "../../cv.json";
 const { name, label } = basics;
@@ -21,11 +22,3 @@ const { name, label } = basics;
     <Projects />
   </main>
 </Layout>
-
-<style>
-  main {
-    padding: 4rem;
-    margin: auto;
-    width: 100%;
-  }
-</style>

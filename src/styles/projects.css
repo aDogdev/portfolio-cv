@@ -1,0 +1,57 @@
+.projects ul {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1rem;
+  margin-inline: -16px;
+}
+
+.projects article {
+  border-radius: 8px;
+  border: 1px solid #f2f2f2;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  padding: 16px;
+  height: 100%;
+}
+
+.projects article header {
+  flex: 1;
+}
+
+.projects article h3 {
+  margin-bottom: 4px;
+}
+
+.projects article h3 span {
+  color: limegreen;
+}
+
+.projects article a {
+  color: #111;
+}
+
+.projects article a[href]:hover {
+  text-decoration: underline;
+}
+
+.projects article p {
+  font-size: 0.75rem;
+  line-height: 1.2rem;
+  margin-bottom: 4px;
+}
+
+.projects footer {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 4px;
+}
+
+.projects footer span {
+  border-radius: 6px;
+  background: #eee;
+  color: #333;
+  font-size: 0.7rem;
+  font-weight: 500;
+  padding: 0.2rem 0.6rem;
+}

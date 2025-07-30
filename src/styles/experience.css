@@ -1,0 +1,42 @@
+.experience ul {
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+}
+
+.experience article h3 {
+  font-weight: 500;
+  color: #111;
+}
+
+.experience article h4 {
+  font-weight: 400;
+  color: #222;
+}
+
+.experience header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 4px;
+}
+
+.experience time {
+  font-size: 0.85rem;
+  color: #555;
+}
+
+.experience footer {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 4px;
+}
+
+.experience footer span {
+  border-radius: 6px;
+  background: #eee;
+  color: #333;
+  font-size: 0.7rem;
+  font-weight: 500;
+  padding: 0.2rem 0.6rem;
+}
