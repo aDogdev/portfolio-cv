@@ -1,10 +1,13 @@
 ---
 import { basics } from "../../../cv.json";
 import Section from "../Section.astro";
+import "../../styles/about.css";
 
 const { summary } = basics;
 ---
 
 <Section title="About me">
-  <p>{summary}</p>
+  <div class="About">
+    <p>{summary}</p>
+  </div>
 </Section>

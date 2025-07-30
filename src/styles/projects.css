@@ -1,8 +1,10 @@
 /* Projects component styles - only colors */
-.projects-link {
-  color: #111;
-}
+.Projects {
+  a {
+    color: #111;
+  }
 
-.projects-link:hover {
-  text-decoration: underline;
+  a:hover {
+    text-decoration: underline;
+  }
 }
