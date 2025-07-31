@@ -1,0 +1,161 @@
+{
+  "site": {
+    "title": "Portafolio y CV",
+    "description": "Portafolio personal y CV"
+  },
+  "nav": {
+    "about": "Sobre mí",
+    "experience": "Experiencia",
+    "education": "Educación",
+    "skills": "Habilidades",
+    "projects": "Proyectos"
+  },
+  "languages": {
+    "en": "Inglés",
+    "es": "Español"
+  },
+  "misc": {
+    "grades": "Notas",
+    "present": "Presente",
+    "social_title": "Visita el perfil de {name} en {network}",
+    "email_title": "Enviar un correo a {name} a la dirección {email}",
+    "phone_title": "Llamar a {name} al {phone}"
+  },
+  "cv": {
+    "basics": {
+      "name": "Adrian Martínez",
+      "label": "Ingeniero en Ciencias Informáticas con más de 2 años de experiencia en desarrollo Full Stack.",
+      "image": "./avatar.jpg",
+      "email": "adrianmg3008@gmail.com",
+      "phone": "+53 54110593",
+      "url": "https://github.com/aDogdev",
+      "summary": "Actualmente me desempeño como desarrollador en Merchise, donde participo en la creación de soluciones tecnológicas utilizando Python. Especializado en el desarrollo de aplicaciones web escalables, he colaborado en proyectos profesionales implementando buenas prácticas de desarrollo y trabajando en equipos ágiles. Comprometido con el aprendizaje continuo y la mejora de los procesos tecnológicos, buscando siempre optimizar los resultados a través de soluciones innovadoras.",
+      "location": {
+        "address": "3122A e/ 31 y Final",
+        "postalCode": "CA 94115",
+        "city": "Marianao",
+        "countryCode": "CU",
+        "region": "La Habana"
+      },
+      "profiles": [
+        {
+          "network": "GitHub",
+          "username": "aDogdev",
+          "url": "https://github.com/aDogdev"
+        },
+        {
+          "network": "LinkedIn",
+          "username": "adogdev",
+          "url": "https://linkedin.com/in/adogdev"
+        },
+        {
+          "network": "X",
+          "username": "aDogdev",
+          "url": "https://x.com/aDogdev"
+        }
+      ]
+    },
+    "work": [
+      {
+        "name": "Universidad de las Ciencias Informáticas",
+        "position": "Desarrollador",
+        "url": "https://uci.cu",
+        "startDate": "2022-09",
+        "endDate": "2023-11",
+        "summary": "Creación de un módulo que gestiona eventos extraordinarios para el Componente de Abastecimiento de la empresa TECNOTEX.",
+        "highlights": []
+      },
+      {
+        "name": "Merchise",
+        "position": "Desarrollador",
+        "url": "https://www.merchise.org",
+        "startDate": "2024-03",
+        "endDate": null,
+        "summary": "Desarrollo de soluciones tecnológicas utilizando Python en un entorno profesional.",
+        "highlights": []
+      }
+    ],
+    "education": [
+      {
+        "institution": "Universidad de las Ciencias Informáticas",
+        "url": "https://uci.cu",
+        "area": "Ingeniería en Ciencias Informáticas",
+        "studyType": "Ingeniería",
+        "startDate": "2018-09",
+        "endDate": "2023-12",
+        "score": "4.6",
+        "courses": ["DB1101 - SQL Básico"]
+      }
+    ],
+    "skills": [
+      {
+        "name": "Nodejs"
+      },
+      {
+        "name": "Expressjs"
+      },
+      {
+        "name": "JavaScript"
+      },
+      {
+        "name": "TypeScript"
+      },
+      {
+        "name": "HTML"
+      },
+      {
+        "name": "CSS"
+      },
+      {
+        "name": "Tailwind"
+      },
+      {
+        "name": "Git"
+      },
+      {
+        "name": "Docker"
+      },
+      {
+        "name": "React"
+      },
+      {
+        "name": "Python"
+      },
+      {
+        "name": "Odoo"
+      }
+    ],
+    "projects": [
+      {
+        "name": "nodetsep",
+        "isActive": true,
+        "description": "Un CLI para inicializar rápidamente proyectos de Node.js con TypeScript, ts-node-dev, ESLint y Prettier preconfigurados.",
+        "highlights": ["Proyecto CLI", "Paquete de NPM"],
+        "url": "https://www.npmjs.com/package/nodetsep"
+      },
+      {
+        "name": "Módulo de Gestión de Eventos Extraordinarios",
+        "isActive": false,
+        "description": "Módulo que gestiona eventos extraordinarios relacionados con mercancías en la empresa TECNOTEX.",
+        "highlights": ["Proyecto final de curso", "5 puntos de calificación"]
+      },
+      {
+        "name": "Sistema de Gestión Académica",
+        "isActive": false,
+        "description": "Desarrollo de un sistema web para gestionar estudiantes y profesores en una institución académica.",
+        "highlights": [
+          "Proyecto final del 4to año de la carrera",
+          "5 puntos de calificación"
+        ],
+        "url": "https://github.com/luismdp05/sistema-gestion-academica"
+      },
+      {
+        "name": "Aplicación de Tareas con React",
+        "isActive": true,
+        "description": "Sitio web para gestionar tareas.",
+        "highlights": ["En desarrollo"],
+        "url": "https://adogdev.github.io/react-tasks-app/"
+      }
+    ]
+  }
+}

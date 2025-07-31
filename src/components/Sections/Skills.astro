@@ -1,14 +1,18 @@
 ---
-import { skills } from "../../../cv.json";
+import { useTranslations, getLangFromUrl } from "../../../src/utils/i18n";
 import Section from "../Section.astro";
 import "../../styles/skills.css";
+
+const lang = getLangFromUrl(Astro.url);
+const t = useTranslations(lang);
+const { skills } = Astro.props;
 ---
 
-<Section title="Skills">
+<Section title={t("nav.skills")}>
   <div class="Skills">
     <ul class="inline-flex gap-2 flex-wrap">
       {
-        skills.map(({ name }) => {
+        skills.map(({ name }: any) => {
           return (
             <li class="rounded-md bg-gray-100 text-black text-sm font-medium px-2 py-1">
               <span>{name}</span>

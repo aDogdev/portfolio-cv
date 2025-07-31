@@ -1,0 +1,161 @@
+{
+  "site": {
+    "title": "Portfolio & CV",
+    "description": "Personal portfolio and CV"
+  },
+  "nav": {
+    "about": "About",
+    "experience": "Experience",
+    "education": "Education",
+    "skills": "Skills",
+    "projects": "Projects"
+  },
+  "languages": {
+    "en": "English",
+    "es": "Spanish"
+  },
+  "misc": {
+    "grades": "Grades",
+    "present": "Present",
+    "social_title": "Visit {name}'s profile on {network}",
+    "email_title": "Send an email to {name} at {email}",
+    "phone_title": "Call {name} at {phone}"
+  },
+  "cv": {
+    "basics": {
+      "name": "Adrian Martínez",
+      "label": "Computer Science Engineer with over 2 years of experience in Full Stack development.",
+      "image": "./avatar.jpg",
+      "email": "adrianmg3008@gmail.com",
+      "phone": "+53 54110593",
+      "url": "https://github.com/aDogdev",
+      "summary": "I currently work as a developer at Merchise, where I participate in creating technological solutions using Python. Specialized in developing scalable web applications, I have collaborated on professional projects implementing good development practices and working in agile teams. Committed to continuous learning and improving technological processes, always seeking to optimize results through innovative solutions.",
+      "location": {
+        "address": "3122A e/ 31 y Final",
+        "postalCode": "CA 94115",
+        "city": "Marianao",
+        "countryCode": "CU",
+        "region": "La Habana"
+      },
+      "profiles": [
+        {
+          "network": "GitHub",
+          "username": "aDogdev",
+          "url": "https://github.com/aDogdev"
+        },
+        {
+          "network": "LinkedIn",
+          "username": "adogdev",
+          "url": "https://linkedin.com/in/adogdev"
+        },
+        {
+          "network": "X",
+          "username": "aDogdev",
+          "url": "https://x.com/aDogdev"
+        }
+      ]
+    },
+    "work": [
+      {
+        "name": "Universidad de las Ciencias Informáticas",
+        "position": "Developer",
+        "url": "https://uci.cu",
+        "startDate": "2022-09",
+        "endDate": "2023-11",
+        "summary": "Creation of a module that manages extraordinary events for the Supply Component of TECNOTEX company.",
+        "highlights": []
+      },
+      {
+        "name": "Merchise",
+        "position": "Developer",
+        "url": "https://www.merchise.org",
+        "startDate": "2024-03",
+        "endDate": null,
+        "summary": "Development of technological solutions using Python in a professional environment.",
+        "highlights": []
+      }
+    ],
+    "education": [
+      {
+        "institution": "Universidad de las Ciencias Informáticas",
+        "url": "https://uci.cu",
+        "area": "Computer Science Engineering",
+        "studyType": "Engineering",
+        "startDate": "2018-09",
+        "endDate": "2023-12",
+        "score": "4.6",
+        "courses": ["DB1101 - Basic SQL"]
+      }
+    ],
+    "skills": [
+      {
+        "name": "Nodejs"
+      },
+      {
+        "name": "Expressjs"
+      },
+      {
+        "name": "JavaScript"
+      },
+      {
+        "name": "TypeScript"
+      },
+      {
+        "name": "HTML"
+      },
+      {
+        "name": "CSS"
+      },
+      {
+        "name": "Tailwind"
+      },
+      {
+        "name": "Git"
+      },
+      {
+        "name": "Docker"
+      },
+      {
+        "name": "React"
+      },
+      {
+        "name": "Python"
+      },
+      {
+        "name": "Odoo"
+      }
+    ],
+    "projects": [
+      {
+        "name": "nodetsep",
+        "isActive": true,
+        "description": "A CLI to quickly initialize Node.js projects with TypeScript, ts-node-dev, ESLint, and Prettier preconfigured.",
+        "highlights": ["CLI project", "NPM package"],
+        "url": "https://www.npmjs.com/package/nodetsep"
+      },
+      {
+        "name": "Extraordinary Events Management Module",
+        "isActive": false,
+        "description": "Module that manages extraordinary events related to merchandise in the company TECNOTEX.",
+        "highlights": ["Final course project", "5 rating points"]
+      },
+      {
+        "name": "Academic Management System",
+        "isActive": false,
+        "description": "Development of a web system to manage students and teachers in an academic institution.",
+        "highlights": [
+          "Final project of the 4th year of the degree",
+          "5 rating points"
+        ],
+        "url": "https://github.com/luismdp05/sistema-gestion-academica"
+      },
+      {
+        "name": "React Tasks App",
+        "isActive": true,
+        "description": "Website to manage tasks.",
+        "highlights": ["In development"],
+        "url": "https://adogdev.github.io/react-tasks-app/"
+      }
+    ]
+  }
+}

@@ -1,13 +1,13 @@
 ---
-import { basics } from "../../../cv.json";
+import { useTranslations, getLangFromUrl } from "../../../src/utils/i18n";
 import Section from "../Section.astro";
-import "../../styles/about.css";
 
-const { summary } = basics;
+const lang = getLangFromUrl(Astro.url);
+const t = useTranslations(lang);
+
+const { summary } = Astro.props
 ---
 
-<Section title="About me">
-  <div class="About">
-    <p>{summary}</p>
-  </div>
-</Section>
+<Section title={t('nav.about')}>
+  <p>{summary}</p>
+</section>

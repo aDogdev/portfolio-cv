@@ -1,0 +1,44 @@
+---
+import { LANGUAGES, getLangFromUrl } from '../utils/i18n';
+import "../styles/language-switcher.css";
+
+const lang = getLangFromUrl(Astro.url);
+const { pathname } = Astro.url;
+
+const newPathname = (newLang: string) => {
+  const pathParts = pathname.split('/').filter(Boolean);
+  if (pathParts.length > 0 && pathParts[0] in LANGUAGES) {
+    pathParts[0] = newLang;
+  } else {
+    pathParts.unshift(newLang);
+  }
+  return `/${pathParts.join('/')}`;
+}
+---
+
+<div class="LanguageSwitcher">
+  <select
+    id="language-select"
+    class="p-2 rounded-md border border-gray-300 cursor-pointer"
+  >
+    {
+      Object.entries(LANGUAGES).map(([id, name]) => (
+        <option
+          value={newPathname(id)}
+          selected={id === lang}
+        >
+          {name}
+        </option>
+      ))
+    }
+  </select>
+</div>
+
+<script>
+  const languageSelect = document.getElementById('language-select') as HTMLSelectElement;
+  
+  languageSelect?.addEventListener('change', (event) => {
+    const select = event.target as HTMLSelectElement;
+    window.location.href = select.value;
+  });
+</script>

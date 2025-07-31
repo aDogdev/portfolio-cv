@@ -1,0 +1,26 @@
+---
+import { getLangFromUrl, useTranslations } from "../../../src/utils/i18n";
+import Layout from "../../layouts/Layout.astro";
+import Hero from "../../components/Sections/Hero.astro";
+import About from "../../components/Sections/About.astro";
+import Education from "../../components/Sections/Education.astro";
+import Experience from "../../components/Sections/Experience.astro";
+import Projects from "../../components/Sections/Projects.astro";
+import Skills from "../../components/Sections/Skills.astro";
+
+const lang = getLangFromUrl(Astro.url);
+const t = useTranslations(lang);
+
+const { basics, work, education, skills, projects } = t("cv");
+---
+
+<Layout>
+  <main class="p-16 mx-auto w-full">
+    <Hero basics={basics} />
+    <About summary={basics.summary} />
+    <Experience work={work} />
+    <Education education={education} />
+    <Skills skills={skills} />
+    <Projects projects={projects} />
+  </main>
+</Layout>

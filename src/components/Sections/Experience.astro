@@ -1,49 +1,51 @@
 ---
-import { work } from "../../../cv.json";
+import { useTranslations, getLangFromUrl } from "../../../src/utils/i18n";
 import Section from "../Section.astro";
 import "../../styles/experience.css";
+
+const lang = getLangFromUrl(Astro.url);
+const t = useTranslations(lang);
+const { work } = Astro.props;
 ---
 
-<Section title="Work Experience">
+<Section title={t("nav.experience")}>
   <div class="Experience">
     <ul class="flex flex-col gap-8">
       {
-        work.map(
-          ({ name, startDate, endDate, position, summary, highlights }) => {
-            const startYear = new Date(startDate).getFullYear();
-            const endYear =
-              endDate !== null ? new Date(endDate).getFullYear() : "Present";
-            const years = `${startYear} - ${endYear}`;
+        work.map(({ name, startDate, endDate, position, summary, highlights }: any) => {
+          const startYear = new Date(startDate).getFullYear();
+          const endYear =
+            endDate !== null
+              ? new Date(endDate).getFullYear()
+              : t("misc.present");
+          const years = `${startYear} - ${endYear}`;
 
-            return (
-              <li>
-                <article>
-                  <header class="flex justify-between items-start mb-1">
-                    <div>
-                      <h3 class="font-medium">{name}</h3>
-                      <h4 class="font-normal">
-                        {position}
-                      </h4>
-                    </div>
+          return (
+            <li>
+              <article>
+                <header class="flex justify-between items-start mb-1">
+                  <div>
+                    <h3 class="font-medium">{name}</h3>
+                    <h4 class="font-normal">{position}</h4>
+                  </div>
 
-                    <time class="text-sm">{years}</time>
-                  </header>
+                  <time class="text-sm">{years}</time>
+                </header>
 
-                  <footer class="flex flex-wrap gap-1">
-                    <p>{summary}</p>
-                    {highlights.map((highlight) => {
-                      return (
-                        <span class="rounded-md bg-gray-100 text-gray-700 text-xs font-medium px-2 py-1">
-                          {highlight}
-                        </span>
-                      );
-                    })}
-                  </footer>
-                </article>
-              </li>
-            );
-          }
-        )
+                <footer class="flex flex-wrap gap-1">
+                  <p>{summary}</p>
+                  {highlights.map((highlight: string) => {
+                    return (
+                      <span class="rounded-md bg-gray-100 text-gray-700 text-xs font-medium px-2 py-1">
+                        {highlight}
+                      </span>
+                    );
+                  })}
+                </footer>
+              </article>
+            </li>
+          );
+        })
       }
     </ul>
   </div>

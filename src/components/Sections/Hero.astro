@@ -1,5 +1,5 @@
 ---
-import { basics } from "../../../cv.json";
+import { useTranslations, getLangFromUrl } from "../../../src/utils/i18n";
 import Section from "../Section.astro";
 import Mail from "../../icons/Mail.astro";
 import Phone from "../../icons/Phone.astro";
@@ -9,8 +9,21 @@ import WorldMap from "../../icons/WorldMap.astro";
 import LinkedIn from "../../icons/LinkedIn.astro";
 import "../../styles/hero.css";
 
-const { name, label, image, location, profiles, phone, email } = basics;
+const { basics } = Astro.props;
+const {
+  name,
+  label,
+  image,
+  location,
+  profiles,
+  phone,
+  email,
+} = basics;
+
 const { city, region } = location;
+
+const lang = getLangFromUrl(Astro.url);
+const t = useTranslations(lang);
 
 const SOCIAL_ICONS: Record<string, any> = {
   GitHub,
@@ -18,7 +31,7 @@ const SOCIAL_ICONS: Record<string, any> = {
   X,
 };
 
-const linkedInfo = profiles.find(({ network }) => network === "LinkedIn");
+const linkedInfo = profiles.find(({ network }: any) => network === "LinkedIn");
 const linkedUrl = linkedInfo?.url;
 const printInfo = [email, phone, linkedUrl].filter(Boolean).join(" • ");
 ---
@@ -40,7 +53,7 @@ const printInfo = [email, phone, linkedUrl].filter(Boolean).join(" • ");
           email && (
             <a
               href={`mailto:${email}`}
-              title={`Send an email to ${name} at ${email}`}
+              title={t("misc.email_title", { name, email })}
               target="_blank"
               rel="noopener noreferrer"
               class="inline-flex items-center justify-center p-1 h-8 w-8 rounded-md"
@@ -53,7 +66,7 @@ const printInfo = [email, phone, linkedUrl].filter(Boolean).join(" • ");
           phone && (
             <a
               href={`tel:${phone}`}
-              title={`Call ${name} at ${phone}`}
+              title={t("misc.phone_title", { name, phone })}
               target="_blank"
               rel="noopener noreferrer"
               class="inline-flex items-center justify-center p-1 h-8 w-8 rounded-md"
@@ -63,13 +76,12 @@ const printInfo = [email, phone, linkedUrl].filter(Boolean).join(" • ");
           )
         }
         {
-          profiles.map(({ network, url, username }) => {
+          profiles.map(({ network, url }: any) => {
             const Icon = SOCIAL_ICONS[network];
-
             return (
               <a
                 href={url}
-                title={`Visit ${name}'s profile on ${network}`}
+                title={t("misc.social_title", { name, network })}
                 target="_blank"
                 rel="noopener noreferrer"
                 class="inline-flex items-center justify-center p-1 h-8 w-8 rounded-md"
