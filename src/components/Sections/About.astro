@@ -1,11 +1,11 @@
 ---
-import { useTranslations, getLangFromUrl } from "../../../src/utils/i18n";
 import Section from "../Section.astro";
+interface Props {
+  summary: string;
+  t: any;
+}
 
-const lang = getLangFromUrl(Astro.url);
-const t = useTranslations(lang);
-
-const { summary } = Astro.props
+const { summary, t } = Astro.props;
 ---
 
 <Section title={t('nav.about')}>

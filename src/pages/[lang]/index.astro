@@ -11,16 +11,40 @@ import Skills from "../../components/Sections/Skills.astro";
 const lang = getLangFromUrl(Astro.url);
 const t = useTranslations(lang);
 
-const { basics, work, education, skills, projects } = t("cv");
+// Default empty values for safety
+const defaultCV = {
+  basics: {
+    name: "",
+    label: "",
+    image: "",
+    email: "",
+    phone: "",
+    url: "",
+    summary: "",
+    location: { city: "", region: "" },
+    profiles: []
+  },
+  work: [],
+  education: [],
+  skills: [],
+  projects: []
+};
+
+// Safe destructuring with fallback to defaults
+const cv = t("cv") || defaultCV;
+const { basics, work, education, skills, projects } = {
+  ...defaultCV,
+  ...cv
+};
 ---
 
 <Layout>
   <main class="p-16 mx-auto w-full">
-    <Hero basics={basics} />
-    <About summary={basics.summary} />
-    <Experience work={work} />
-    <Education education={education} />
-    <Skills skills={skills} />
-    <Projects projects={projects} />
+        <Hero basics={basics} t={t} />
+    <About summary={basics.summary} t={t} />
+    <Experience work={work} t={t} />
+    <Education education={education} t={t} />
+    <Skills skills={skills} t={t} />
+    <Projects projects={projects} t={t} />
   </main>
 </Layout>

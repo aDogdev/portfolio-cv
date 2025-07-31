@@ -38,5 +38,5 @@ function detectLanguage(acceptLanguageHeader: string | null): string {
 const acceptLanguageHeader = Astro.request.headers.get('accept-language');
 const redirectLang = detectLanguage(acceptLanguageHeader);
 
-return Astro.redirect(`/${redirectLang}/`, 307);
+return Astro.redirect(`/${redirectLang}/`, 302);
 ---

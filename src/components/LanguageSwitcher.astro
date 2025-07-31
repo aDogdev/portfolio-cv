@@ -5,21 +5,32 @@ import "../styles/language-switcher.css";
 const lang = getLangFromUrl(Astro.url);
 const { pathname } = Astro.url;
 
-const newPathname = (newLang: string) => {
-  const pathParts = pathname.split('/').filter(Boolean);
-  if (pathParts.length > 0 && pathParts[0] in LANGUAGES) {
-    pathParts[0] = newLang;
-  } else {
-    pathParts.unshift(newLang);
+const newPathname = (newLang: string): string => {
+  try {
+    const pathParts = pathname.split('/').filter(Boolean);
+    if (!Array.isArray(pathParts)) {
+      throw new Error('Invalid pathname structure');
+    }
+    
+    if (pathParts.length > 0 && pathParts[0] in LANGUAGES) {
+      pathParts[0] = newLang;
+    } else {
+      pathParts.unshift(newLang);
+    }
+    return `/${pathParts.join('/')}`;
+  } catch (error) {
+    console.error('Error generating language path:', error);
+    return `/${newLang}`; // Safe fallback
   }
-  return `/${pathParts.join('/')}`;
 }
 ---
 
 <div class="LanguageSwitcher">
+  <label for="language-select" class="sr-only">Select language</label>
   <select
     id="language-select"
     class="p-2 rounded-md border border-gray-300 cursor-pointer"
+    aria-label="Select language"
   >
     {
       Object.entries(LANGUAGES).map(([id, name]) => (
@@ -38,7 +49,16 @@ const newPathname = (newLang: string) => {
   const languageSelect = document.getElementById('language-select') as HTMLSelectElement;
   
   languageSelect?.addEventListener('change', (event) => {
-    const select = event.target as HTMLSelectElement;
-    window.location.href = select.value;
+    try {
+      const select = event.target as HTMLSelectElement;
+      if (!select.value) {
+        throw new Error('Invalid language selection');
+      }
+      window.location.href = select.value;
+    } catch (error) {
+      console.error('Error changing language:', error);
+      // Fallback to homepage if there's an error
+      window.location.href = '/';
+    }
   });
 </script>
