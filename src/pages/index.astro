@@ -1,5 +1,5 @@
 ---
-import { LANGUAGES, defaultLang } from '../utils/i18n';
+import { LANGUAGES, defaultLang } from "../utils/i18n";
 
 function detectLanguage(acceptLanguageHeader: string | null): string {
   try {
@@ -9,7 +9,7 @@ function detectLanguage(acceptLanguageHeader: string | null): string {
     }
 
     // Split by comma to get language priorities
-    const languages = acceptLanguageHeader.split(',');
+    const languages = acceptLanguageHeader.split(",");
     if (languages.length === 0) {
       return defaultLang;
     }
@@ -21,7 +21,7 @@ function detectLanguage(acceptLanguageHeader: string | null): string {
     }
 
     // Split by dash to separate language code from region
-    const [langCode] = primaryLang.split('-');
+    const [langCode] = primaryLang.split("-");
     if (!langCode) {
       return defaultLang;
     }
@@ -30,12 +30,12 @@ function detectLanguage(acceptLanguageHeader: string | null): string {
     const normalizedLang = langCode.toLowerCase();
     return normalizedLang in LANGUAGES ? normalizedLang : defaultLang;
   } catch (error) {
-    console.error('Error parsing Accept-Language header:', error);
+    console.error("Error parsing Accept-Language header:", error);
     return defaultLang;
   }
 }
 
-const acceptLanguageHeader = Astro.request.headers.get('accept-language');
+const acceptLanguageHeader = Astro.request.headers.get("accept-language");
 const redirectLang = detectLanguage(acceptLanguageHeader);
 
 return Astro.redirect(`/${redirectLang}/`, 302);

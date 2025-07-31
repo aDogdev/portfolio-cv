@@ -50,7 +50,7 @@ export function useTranslations(lang: Lang) {
     if (params) {
       text = text.replace(
         /\{(\w+)\}/g,
-        (match, param) => params[param] || match
+        (match, param) => params[param] || match,
       );
     }
 

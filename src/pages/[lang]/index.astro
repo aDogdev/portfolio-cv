@@ -22,25 +22,25 @@ const defaultCV = {
     url: "",
     summary: "",
     location: { city: "", region: "" },
-    profiles: []
+    profiles: [],
   },
   work: [],
   education: [],
   skills: [],
-  projects: []
+  projects: [],
 };
 
 // Safe destructuring with fallback to defaults
 const cv = t("cv") || defaultCV;
 const { basics, work, education, skills, projects } = {
   ...defaultCV,
-  ...cv
+  ...cv,
 };
 ---
 
 <Layout>
   <main class="p-16 mx-auto w-full">
-        <Hero basics={basics} t={t} />
+    <Hero basics={basics} t={t} />
     <About summary={basics.summary} t={t} />
     <Experience work={work} t={t} />
     <Education education={education} t={t} />

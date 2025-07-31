@@ -1,5 +1,5 @@
 ---
-import { LANGUAGES, getLangFromUrl } from '../utils/i18n';
+import { LANGUAGES, getLangFromUrl } from "../utils/i18n";
 import "../styles/language-switcher.css";
 
 const lang = getLangFromUrl(Astro.url);
@@ -7,22 +7,22 @@ const { pathname } = Astro.url;
 
 const newPathname = (newLang: string): string => {
   try {
-    const pathParts = pathname.split('/').filter(Boolean);
+    const pathParts = pathname.split("/").filter(Boolean);
     if (!Array.isArray(pathParts)) {
-      throw new Error('Invalid pathname structure');
+      throw new Error("Invalid pathname structure");
     }
-    
+
     if (pathParts.length > 0 && pathParts[0] in LANGUAGES) {
       pathParts[0] = newLang;
     } else {
       pathParts.unshift(newLang);
     }
-    return `/${pathParts.join('/')}`;
+    return `/${pathParts.join("/")}`;
   } catch (error) {
-    console.error('Error generating language path:', error);
+    console.error("Error generating language path:", error);
     return `/${newLang}`; // Safe fallback
   }
-}
+};
 ---
 
 <div class="LanguageSwitcher">
@@ -34,10 +34,7 @@ const newPathname = (newLang: string): string => {
   >
     {
       Object.entries(LANGUAGES).map(([id, name]) => (
-        <option
-          value={newPathname(id)}
-          selected={id === lang}
-        >
+        <option value={newPathname(id)} selected={id === lang}>
           {name}
         </option>
       ))
@@ -46,19 +43,21 @@ const newPathname = (newLang: string): string => {
 </div>
 
 <script>
-  const languageSelect = document.getElementById('language-select') as HTMLSelectElement;
-  
-  languageSelect?.addEventListener('change', (event) => {
+  const languageSelect = document.getElementById(
+    "language-select",
+  ) as HTMLSelectElement;
+
+  languageSelect?.addEventListener("change", (event) => {
     try {
       const select = event.target as HTMLSelectElement;
       if (!select.value) {
-        throw new Error('Invalid language selection');
+        throw new Error("Invalid language selection");
       }
       window.location.href = select.value;
     } catch (error) {
-      console.error('Error changing language:', error);
+      console.error("Error changing language:", error);
       // Fallback to homepage if there's an error
-      window.location.href = '/';
+      window.location.href = "/";
     }
   });
 </script>
