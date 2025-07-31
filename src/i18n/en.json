@@ -29,7 +29,7 @@
       "email": "adrianmg3008@gmail.com",
       "phone": "+53 54110593",
       "url": "https://github.com/aDogdev",
-      "summary": "I currently work as a developer at Merchise, where I participate in creating technological solutions using Python. Specialized in developing scalable web applications, I have collaborated on professional projects implementing good development practices and working in agile teams. Committed to continuous learning and improving technological processes, always seeking to optimize results through innovative solutions.",
+      "summary": "Full Stack Developer passionate about creating scalable and efficient web solutions. I specialize in developing modern applications using technologies like Python, JavaScript, and TypeScript. With experience in agile methodologies and development best practices, I stand out for my continuous learning ability and commitment to technical excellence. I constantly seek new challenges that allow me to grow professionally while delivering value through innovative solutions.",
       "location": {
         "address": "3122A e/ 31 y Final",
         "postalCode": "CA 94115",
@@ -62,7 +62,7 @@
         "url": "https://uci.cu",
         "startDate": "2022-09",
         "endDate": "2023-11",
-        "summary": "Creation of a module that manages extraordinary events for the Supply Component of TECNOTEX company.",
+        "summary": "Development and implementation of a critical event management system for the supply chain. Led the architecture design and implementation of key functionalities using Python.",
         "highlights": []
       },
       {
@@ -130,30 +130,47 @@
         "name": "nodetsep",
         "isActive": true,
         "description": "A CLI to quickly initialize Node.js projects with TypeScript, ts-node-dev, ESLint, and Prettier preconfigured.",
-        "highlights": ["CLI project", "NPM package"],
+        "highlights": [
+          "Published on NPM",
+          "Command Line Interface",
+          "Development workflow automation",
+          "Project scaffolding tool"
+        ],
         "url": "https://www.npmjs.com/package/nodetsep"
       },
       {
         "name": "Extraordinary Events Management Module",
         "isActive": false,
-        "description": "Module that manages extraordinary events related to merchandise in the company TECNOTEX.",
-        "highlights": ["Final course project", "5 rating points"]
+        "description": "Comprehensive system for detecting, tracking, and resolving critical events in the supply chain. Implemented with a modular and scalable architecture.",
+        "highlights": [
+          "Final course project - Maximum grade",
+          "Modular architecture",
+          "Python backend implementation",
+          "Integration with existing systems"
+        ]
       },
       {
         "name": "Academic Management System",
         "isActive": false,
-        "description": "Development of a web system to manage students and teachers in an academic institution.",
+        "description": "Basic web application built with Django 4.2 for managing student and teacher registrations in an academic environment.",
         "highlights": [
-          "Final project of the 4th year of the degree",
-          "5 rating points"
+          "Final year project - Maximum grade",
+          "Django-based web application",
+          "User authentication system",
+          "Basic CRUD operations"
         ],
         "url": "https://github.com/luismdp05/sistema-gestion-academica"
       },
       {
         "name": "React Tasks App",
         "isActive": true,
-        "description": "Website to manage tasks.",
-        "highlights": ["In development"],
+        "description": "Modern task management application built with React, featuring a clean and intuitive interface for personal task organization.",
+        "highlights": [
+          "React + Vite implementation",
+          "Tailwind CSS styling",
+          "Local storage integration",
+          "Responsive design"
+        ],
         "url": "https://adogdev.github.io/react-tasks-app/"
       }
     ]

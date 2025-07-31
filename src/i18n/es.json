@@ -29,7 +29,7 @@
       "email": "adrianmg3008@gmail.com",
       "phone": "+53 54110593",
       "url": "https://github.com/aDogdev",
-      "summary": "Actualmente me desempeño como desarrollador en Merchise, donde participo en la creación de soluciones tecnológicas utilizando Python. Especializado en el desarrollo de aplicaciones web escalables, he colaborado en proyectos profesionales implementando buenas prácticas de desarrollo y trabajando en equipos ágiles. Comprometido con el aprendizaje continuo y la mejora de los procesos tecnológicos, buscando siempre optimizar los resultados a través de soluciones innovadoras.",
+      "summary": "Desarrollador Full Stack apasionado por crear soluciones web escalables y eficientes. Me especializo en el desarrollo de aplicaciones modernas utilizando tecnologías como Python, JavaScript y TypeScript. Con experiencia en metodologías ágiles y buenas prácticas de desarrollo, me destaco por mi capacidad de aprendizaje continuo y mi compromiso con la excelencia técnica. Busco constantemente nuevos desafíos que me permitan crecer profesionalmente mientras aporto valor a través de soluciones innovadoras.",
       "location": {
         "address": "3122A e/ 31 y Final",
         "postalCode": "CA 94115",
@@ -62,7 +62,7 @@
         "url": "https://uci.cu",
         "startDate": "2022-09",
         "endDate": "2023-11",
-        "summary": "Creación de un módulo que gestiona eventos extraordinarios para el Componente de Abastecimiento de la empresa TECNOTEX.",
+        "summary": "Desarrollo e implementación de un sistema de gestión de eventos críticos para la cadena de suministro. Lideré el diseño de la arquitectura y la implementación de funcionalidades clave utilizando Python.",
         "highlights": []
       },
       {
@@ -130,30 +130,46 @@
         "name": "nodetsep",
         "isActive": true,
         "description": "Un CLI para inicializar rápidamente proyectos de Node.js con TypeScript, ts-node-dev, ESLint y Prettier preconfigurados.",
-        "highlights": ["Proyecto CLI", "Paquete de NPM"],
+        "highlights": [
+          "Publicado en NPM",
+          "CLI",
+          "Automatización del flujo de trabajo de desarrollo"
+        ],
         "url": "https://www.npmjs.com/package/nodetsep"
       },
       {
         "name": "Módulo de Gestión de Eventos Extraordinarios",
         "isActive": false,
-        "description": "Módulo que gestiona eventos extraordinarios relacionados con mercancías en la empresa TECNOTEX.",
-        "highlights": ["Proyecto final de curso", "5 puntos de calificación"]
+        "description": "Sistema integral para la detección, seguimiento y resolución de eventos críticos en la cadena de suministro. Implementado con una arquitectura modular y escalable.",
+        "highlights": [
+          "Proyecto final de curso - Calificación máxima",
+          "Arquitectura modular",
+          "Implementación de backend en Python",
+          "Integración con sistemas existentes"
+        ]
       },
       {
         "name": "Sistema de Gestión Académica",
         "isActive": false,
-        "description": "Desarrollo de un sistema web para gestionar estudiantes y profesores en una institución académica.",
+        "description": "Aplicación web básica construida con Django 4.2 para gestionar inscripciones de estudiantes y profesores en un entorno académico.",
         "highlights": [
-          "Proyecto final del 4to año de la carrera",
-          "5 puntos de calificación"
+          "Proyecto final de año - Calificación máxima",
+          "Aplicación web basada en Django",
+          "Sistema de autenticación de usuarios",
+          "Operaciones CRUD básicas"
         ],
         "url": "https://github.com/luismdp05/sistema-gestion-academica"
       },
       {
-        "name": "Aplicación de Tareas con React",
+        "name": "React Tasks App",
         "isActive": true,
-        "description": "Sitio web para gestionar tareas.",
-        "highlights": ["En desarrollo"],
+        "description": "Aplicación moderna de gestión de tareas construida con React, que presenta una interfaz limpia e intuitiva para la organización de tareas personales.",
+        "highlights": [
+          "Implementación de React + Vite",
+          "Tailwind CSS",
+          "Persistencia local de datos",
+          "Diseño responsive"
+        ],
         "url": "https://adogdev.github.io/react-tasks-app/"
       }
     ]
