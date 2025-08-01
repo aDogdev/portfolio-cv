@@ -3,6 +3,6 @@
 declare namespace App {
   interface Locals {
     lang: string;
-    t: (key: string) => string;
+    t: (key: string, params?: Record<string, unknown>) => string;
   }
 }
