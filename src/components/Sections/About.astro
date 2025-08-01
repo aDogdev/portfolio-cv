@@ -1,8 +1,10 @@
 ---
 import Section from "../Section.astro";
+
+type TranslationFunction = (key: string, params?: Record<string, string>) => string;
 interface Props {
   summary: string;
-  t: any;
+  t: TranslationFunction;
 }
 
 const { summary, t } = Astro.props;
