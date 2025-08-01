@@ -1,14 +1,12 @@
 import { defineConfig } from "astro/config";
 import tailwindcss from "@tailwindcss/vite";
-import node from "@astrojs/node";
+import vercel from "@astrojs/vercel";
 
 // https://astro.build/config
 export default defineConfig({
   output: "server",
-  site: "https://adogdev.github.io",
-  adapter: node({
-    mode: "standalone"
-  }),
+  site: "https://portfolio-adogdev.vercel.app/",
+  adapter: vercel(),
   vite: {
     plugins: [tailwindcss()],
   },
