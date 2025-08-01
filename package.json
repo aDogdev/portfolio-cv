@@ -9,7 +9,7 @@
     "start": "astro dev",
     "build": "astro build",
     "preview": "astro preview",
-    "format": "prettier --write .",
+    "format": "prettier --config ./.prettierrc --write .",
     "astro": "astro"
   },
   "dependencies": {
