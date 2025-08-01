@@ -6,6 +6,16 @@ import "../../styles/education.css";
 const lang = getLangFromUrl(Astro.url);
 const t = useTranslations(lang);
 const { education } = Astro.props;
+
+interface Education {
+  institution: string;
+  startDate: string;
+  endDate: string | null;
+  studyType: string;
+  score: string;
+  area?: string;
+  url?: string;
+}
 ---
 
 <Section title={t("nav.education")}>
@@ -19,7 +29,7 @@ const { education } = Astro.props;
             endDate,
             studyType,
             score,
-          }: any) => {
+          }: Education) => {
             const startYear = new Date(startDate).getFullYear();
             const endYear =
               endDate !== null
@@ -41,15 +51,14 @@ const { education } = Astro.props;
 
                   <footer>
                     <p>
-                      {t("misc.grades")}: <span class="text-lime-500"
-                        >{score}</span
-                      >
+                      {t("misc.grades")}:{" "}
+                      <span class="text-lime-500">{score}</span>
                     </p>
                   </footer>
                 </article>
               </li>
             );
-          }
+          },
         )
       }
     </ul>

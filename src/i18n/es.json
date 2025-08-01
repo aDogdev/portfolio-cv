@@ -17,6 +17,7 @@
   "misc": {
     "grades": "Notas",
     "present": "Presente",
+    "desconocido": "Desconocido",
     "social_title": "Visita el perfil de {name} en {network}",
     "email_title": "Enviar un correo a {name} a la dirección {email}",
     "phone_title": "Llamar a {name} al {phone}"

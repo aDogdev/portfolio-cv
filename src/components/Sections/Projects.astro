@@ -6,6 +6,14 @@ import "../../styles/projects.css";
 const lang = getLangFromUrl(Astro.url);
 const t = useTranslations(lang);
 const { projects } = Astro.props;
+
+interface Project {
+  name: string;
+  description: string;
+  url?: string;
+  highlights: string[];
+  isActive: boolean;
+}
 ---
 
 <Section title={t("nav.projects")}>
@@ -13,7 +21,7 @@ const { projects } = Astro.props;
     <ul class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 -mx-4">
       {
         projects.map(
-          ({ name, description, url, highlights, isActive }: any) => {
+          ({ name, description, url, highlights, isActive }: Project) => {
             return (
               <li>
                 <article class="rounded-lg border border-gray-100 flex flex-col gap-4 p-4 h-full">
@@ -35,7 +43,7 @@ const { projects } = Astro.props;
                   </header>
 
                   <footer class="flex flex-wrap gap-1">
-                    {highlights.map((highlight: string) => {
+                    {highlights.map((highlight) => {
                       return (
                         <span class="rounded-md bg-gray-100 text-gray-700 text-xs font-medium px-2 py-1">
                           {highlight}
@@ -46,7 +54,7 @@ const { projects } = Astro.props;
                 </article>
               </li>
             );
-          }
+          },
         )
       }
     </ul>

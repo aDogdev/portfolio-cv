@@ -17,13 +17,21 @@ const { city, region } = location;
 const lang = getLangFromUrl(Astro.url);
 const t = useTranslations(lang);
 
+interface Profile {
+  network: string;
+  url: string;
+  username?: string;
+}
+
 const SOCIAL_ICONS: Record<string, any> = {
   GitHub,
   LinkedIn,
   X,
 };
 
-const linkedInfo = profiles.find(({ network }: any) => network === "LinkedIn");
+const linkedInfo = profiles.find(
+  ({ network }: Profile) => network === "LinkedIn",
+);
 const linkedUrl = linkedInfo?.url;
 const printInfo = [email, phone, linkedUrl].filter(Boolean).join(" • ");
 ---
@@ -68,7 +76,7 @@ const printInfo = [email, phone, linkedUrl].filter(Boolean).join(" • ");
           )
         }
         {
-          profiles.map(({ network, url }: any) => {
+          profiles.map(({ network, url }: Profile) => {
             const Icon = SOCIAL_ICONS[network];
             return (
               <a

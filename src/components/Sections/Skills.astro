@@ -5,14 +5,22 @@ import "../../styles/skills.css";
 
 const lang = getLangFromUrl(Astro.url);
 const t = useTranslations(lang);
-const { skills } = Astro.props;
+interface Skill {
+  name: string;
+}
+
+interface Props {
+  skills: Skill[];
+}
+
+const { skills }: Props = Astro.props;
 ---
 
 <Section title={t("nav.skills")}>
   <div class="Skills">
     <ul class="inline-flex gap-2 flex-wrap">
       {
-        skills.map(({ name }: any) => {
+        skills.map(({ name }: Skill) => {
           return (
             <li class="rounded-md bg-gray-100 text-black text-sm font-medium px-2 py-1">
               <span>{name}</span>

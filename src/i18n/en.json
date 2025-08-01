@@ -17,6 +17,7 @@
   "misc": {
     "grades": "Grades",
     "present": "Present",
+    "unknown": "Unknown",
     "social_title": "Visit {name}'s profile on {network}",
     "email_title": "Send an email to {name} at {email}",
     "phone_title": "Call {name} at {phone}"
