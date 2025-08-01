@@ -24,26 +24,27 @@ type Paths<T> = T extends object
 
 export type Key = Paths<UI["en"]>;
 
-function getNestedValue(obj: any, path: string): any {
+function getNestedValue<T>(obj: T, path: string): string {
   if (!obj || !path) return undefined;
-  return path.split(".").reduce((acc, part) => acc && acc[part], obj);
+  return path.split(".").reduce((acc: any, part) => acc?.[part], obj);
 }
 
 export function getLangFromUrl(url: URL) {
-  const [, lang] = url.pathname.split("/");
+  const pathSegments = url.pathname.split("/").filter(Boolean);
+  const lang = pathSegments[0];
   if (lang in ui) return lang as Lang;
   return defaultLang;
 }
 
 export function useTranslations(lang: Lang) {
-  return function t(key: Key, params?: Record<string, string>): any {
+  return function t(key: Key, params?: Record<string, string>): string {
     // Get text from current language or fall back to default
     let text = getNestedValue(ui[lang], key);
     if (text === undefined) {
       text = getNestedValue(ui[defaultLang], key);
     }
     if (text === undefined) {
-      return key;
+      return key as string;
     }
 
     // Replace all parameters in one pass using regex
