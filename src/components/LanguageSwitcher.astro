@@ -8,9 +8,6 @@ const { pathname } = Astro.url;
 const newPathname = (newLang: string): string => {
   try {
     const pathParts = pathname.split("/").filter(Boolean);
-    if (!Array.isArray(pathParts)) {
-      throw new Error("Invalid pathname structure");
-    }
 
     if (pathParts.length > 0 && pathParts[0] in LANGUAGES) {
       pathParts[0] = newLang;
@@ -29,7 +26,7 @@ const newPathname = (newLang: string): string => {
   <label for="language-select" class="sr-only">Select language</label>
   <select
     id="language-select"
-    class="p-2 rounded-md border border-gray-300 cursor-pointer"
+    class="p-2 rounded-md border border-gray-300 cursor-pointer pointer-events-auto"
     aria-label="Select language"
   >
     {
