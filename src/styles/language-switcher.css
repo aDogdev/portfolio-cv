@@ -1,0 +1,17 @@
+.LanguageSwitcher {
+  position: fixed;
+  top: 1rem;
+  right: 1rem;
+  z-index: 100;
+
+  select {
+    background-color: white;
+    font-size: 0.875rem;
+  }
+}
+
+@media print {
+  .LanguageSwitcher {
+    display: none;
+  }
+}

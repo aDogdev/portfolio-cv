@@ -1,0 +1,60 @@
+---
+import { LANGUAGES, getLangFromUrl } from "../utils/i18n";
+import "../styles/language-switcher.css";
+
+const lang = getLangFromUrl(Astro.url);
+const { pathname } = Astro.url;
+
+const newPathname = (newLang: string): string => {
+  try {
+    const pathParts = pathname.split("/").filter(Boolean);
+
+    if (pathParts.length > 0 && pathParts[0] in LANGUAGES) {
+      pathParts[0] = newLang;
+    } else {
+      pathParts.unshift(newLang);
+    }
+    return `/${pathParts.join("/")}`;
+  } catch (error) {
+    console.error("Error generating language path:", error);
+    return `/${newLang}`; // Safe fallback
+  }
+};
+---
+
+<div class="LanguageSwitcher">
+  <label for="language-select" class="sr-only">Select language</label>
+  <select
+    id="language-select"
+    class="p-2 rounded-md border border-gray-300 cursor-pointer pointer-events-auto"
+    aria-label="Select language"
+  >
+    {
+      Object.entries(LANGUAGES).map(([id, name]) => (
+        <option value={newPathname(id)} selected={id === lang}>
+          {name}
+        </option>
+      ))
+    }
+  </select>
+</div>
+
+<script>
+  const languageSelect = document.getElementById(
+    "language-select",
+  ) as HTMLSelectElement;
+
+  languageSelect?.addEventListener("change", (event) => {
+    try {
+      const select = event.target as HTMLSelectElement;
+      if (!select.value) {
+        throw new Error("Invalid language selection");
+      }
+      window.location.href = select.value;
+    } catch (error) {
+      console.error("Error changing language:", error);
+      // Fallback to homepage if there's an error
+      window.location.href = "/";
+    }
+  });
+</script>

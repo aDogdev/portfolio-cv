@@ -1,18 +1,40 @@
 ---
-import { education } from "../../../cv.json";
+import { useTranslations, getLangFromUrl } from "../../utils/i18n";
 import Section from "../Section.astro";
 import "../../styles/education.css";
+
+const lang = getLangFromUrl(Astro.url);
+const t = useTranslations(lang);
+const { education } = Astro.props;
+
+interface Education {
+  institution: string;
+  startDate: string;
+  endDate: string | null;
+  studyType: string;
+  score: string;
+  area?: string;
+  url?: string;
+}
 ---
 
-<Section title="Education">
+<Section title={t("nav.education")}>
   <div class="Education">
     <ul class="flex flex-col gap-8">
       {
         education.map(
-          ({ institution, startDate, endDate, studyType, score }) => {
+          ({
+            institution,
+            startDate,
+            endDate,
+            studyType,
+            score,
+          }: Education) => {
             const startYear = new Date(startDate).getFullYear();
             const endYear =
-              endDate !== null ? new Date(endDate).getFullYear() : "Present";
+              endDate !== null
+                ? new Date(endDate).getFullYear()
+                : t("misc.present");
             const years = `${startYear} - ${endYear}`;
 
             return (
@@ -29,13 +51,14 @@ import "../../styles/education.css";
 
                   <footer>
                     <p>
-                      Grades: <span class="text-lime-500">{score}</span>
+                      {t("misc.grades")}:{" "}
+                      <span class="text-lime-500">{score}</span>
                     </p>
                   </footer>
                 </article>
               </li>
             );
-          }
+          },
         )
       }
     </ul>

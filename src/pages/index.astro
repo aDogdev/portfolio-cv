@@ -1,23 +1,42 @@
 ---
-import Layout from "../layouts/Layout.astro";
-import Hero from "../components/Sections/Hero.astro";
-import About from "../components/Sections/About.astro";
-import Education from "../components/Sections/Education.astro";
-import Experience from "../components/Sections/Experience.astro";
-import Projects from "../components/Sections/Projects.astro";
-import Skills from "../components/Sections/Skills.astro";
+import { LANGUAGES, defaultLang } from "../utils/i18n";
 
-import { basics } from "../../cv.json";
-const { name, label } = basics;
+function detectLanguage(acceptLanguageHeader: string | null): string {
+  try {
+    // If header is missing, return default
+    if (!acceptLanguageHeader) {
+      return defaultLang;
+    }
+
+    // Split by comma to get language priorities
+    const languages = acceptLanguageHeader.split(",");
+    if (languages.length === 0) {
+      return defaultLang;
+    }
+
+    // Get first priority language
+    const primaryLang = languages[0].trim();
+    if (!primaryLang) {
+      return defaultLang;
+    }
+
+    // Split by dash to separate language code from region
+    const [langCode] = primaryLang.split("-");
+    if (!langCode) {
+      return defaultLang;
+    }
+
+    // Normalize to lowercase and check if it's supported
+    const normalizedLang = langCode.toLowerCase();
+    return normalizedLang in LANGUAGES ? normalizedLang : defaultLang;
+  } catch (error) {
+    console.error("Error parsing Accept-Language header:", error);
+    return defaultLang;
+  }
+}
+
+const acceptLanguageHeader = Astro.request.headers.get("accept-language");
+const redirectLang = detectLanguage(acceptLanguageHeader);
+
+return Astro.redirect(`/${redirectLang}/`, 302);
 ---
-
-<Layout title={`Portfolio of ${name} - ${label}`}>
-  <main class="p-16 mx-auto w-full">
-    <Hero />
-    <About />
-    <Experience />
-    <Education />
-    <Skills />
-    <Projects />
-  </main>
-</Layout>

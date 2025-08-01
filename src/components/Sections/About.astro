@@ -1,13 +1,15 @@
 ---
-import { basics } from "../../../cv.json";
 import Section from "../Section.astro";
-import "../../styles/about.css";
 
-const { summary } = basics;
+type TranslationFunction = (key: string, params?: Record<string, string>) => string;
+interface Props {
+  summary: string;
+  t: TranslationFunction;
+}
+
+const { summary, t } = Astro.props;
 ---
 
-<Section title="About me">
-  <div class="About">
-    <p>{summary}</p>
-  </div>
+<Section title={t("nav.about")}>
+  <p>{summary}</p>
 </Section>

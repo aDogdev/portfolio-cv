@@ -1,0 +1,178 @@
+{
+  "site": {
+    "title": "Portafolio y CV",
+    "description": "Portafolio personal y CV"
+  },
+  "nav": {
+    "about": "Sobre mí",
+    "experience": "Experiencia",
+    "education": "Educación",
+    "skills": "Habilidades",
+    "projects": "Proyectos"
+  },
+  "languages": {
+    "en": "Inglés",
+    "es": "Español"
+  },
+  "misc": {
+    "grades": "Notas",
+    "present": "Presente",
+    "desconocido": "Desconocido",
+    "social_title": "Visita el perfil de {name} en {network}",
+    "email_title": "Enviar un correo a {name} a la dirección {email}",
+    "phone_title": "Llamar a {name} al {phone}"
+  },
+  "cv": {
+    "basics": {
+      "name": "Adrian Martínez",
+      "label": "Ingeniero en Ciencias Informáticas con +2 años de experiencia en desarrollo Full Stack.",
+      "image": "./avatar.jpg",
+      "email": "adrianmg3008@gmail.com",
+      "phone": "+53 54110593",
+      "url": "https://github.com/aDogdev",
+      "summary": "Desarrollador Full Stack apasionado por crear soluciones web escalables y eficientes. Me especializo en el desarrollo de aplicaciones modernas utilizando tecnologías como Python, JavaScript y TypeScript. Con experiencia en metodologías ágiles y buenas prácticas de desarrollo, me destaco por mi capacidad de aprendizaje continuo y mi compromiso con la excelencia técnica. Busco constantemente nuevos desafíos que me permitan crecer profesionalmente mientras aporto valor a través de soluciones innovadoras.",
+      "location": {
+        "address": "3122A e/ 31 y Final",
+        "postalCode": "CA 94115",
+        "city": "Marianao",
+        "countryCode": "CU",
+        "region": "La Habana"
+      },
+      "profiles": [
+        {
+          "network": "GitHub",
+          "username": "aDogdev",
+          "url": "https://github.com/aDogdev"
+        },
+        {
+          "network": "LinkedIn",
+          "username": "adogdev",
+          "url": "https://linkedin.com/in/adogdev"
+        },
+        {
+          "network": "X",
+          "username": "aDogdev",
+          "url": "https://x.com/aDogdev"
+        }
+      ]
+    },
+    "work": [
+      {
+        "name": "Universidad de las Ciencias Informáticas",
+        "position": "Desarrollador",
+        "url": "https://uci.cu",
+        "startDate": "2022-09",
+        "endDate": "2023-11",
+        "summary": "Desarrollo e implementación de un sistema de gestión de eventos críticos para la cadena de suministro. Lideré el diseño de la arquitectura y la implementación de funcionalidades clave utilizando Python.",
+        "highlights": []
+      },
+      {
+        "name": "Merchise",
+        "position": "Desarrollador",
+        "url": "https://www.merchise.org",
+        "startDate": "2024-03",
+        "endDate": null,
+        "summary": "Desarrollo de soluciones tecnológicas utilizando Python en un entorno profesional.",
+        "highlights": []
+      }
+    ],
+    "education": [
+      {
+        "institution": "Universidad de las Ciencias Informáticas",
+        "url": "https://uci.cu",
+        "area": "Ingeniería en Ciencias Informáticas",
+        "studyType": "Ingeniería",
+        "startDate": "2018-09",
+        "endDate": "2023-12",
+        "score": "4.6",
+        "courses": ["DB1101 - SQL Básico"]
+      }
+    ],
+    "skills": [
+      {
+        "name": "Nodejs"
+      },
+      {
+        "name": "Expressjs"
+      },
+      {
+        "name": "JavaScript"
+      },
+      {
+        "name": "TypeScript"
+      },
+      {
+        "name": "HTML"
+      },
+      {
+        "name": "CSS"
+      },
+      {
+        "name": "Tailwind"
+      },
+      {
+        "name": "Git"
+      },
+      {
+        "name": "Docker"
+      },
+      {
+        "name": "React"
+      },
+      {
+        "name": "Python"
+      },
+      {
+        "name": "Odoo"
+      }
+    ],
+    "projects": [
+      {
+        "name": "nodetsep",
+        "isActive": true,
+        "description": "Un CLI para inicializar rápidamente proyectos de Node.js con TypeScript, ts-node-dev, ESLint y Prettier preconfigurados.",
+        "highlights": [
+          "Publicado en NPM",
+          "CLI",
+          "Automatización del flujo de trabajo de desarrollo"
+        ],
+        "url": "https://www.npmjs.com/package/nodetsep"
+      },
+      {
+        "name": "Módulo de Gestión de Eventos Extraordinarios",
+        "isActive": false,
+        "description": "Sistema integral para la detección, seguimiento y resolución de eventos críticos en la cadena de suministro. Implementado con una arquitectura modular y escalable.",
+        "highlights": [
+          "Proyecto final de curso - Calificación máxima",
+          "Arquitectura modular",
+          "Implementación de backend en Python",
+          "Integración con sistemas existentes"
+        ]
+      },
+      {
+        "name": "Sistema de Gestión Académica",
+        "isActive": false,
+        "description": "Aplicación web básica construida con Django 4.2 para gestionar inscripciones de estudiantes y profesores en un entorno académico.",
+        "highlights": [
+          "Proyecto final de año - Calificación máxima",
+          "Aplicación web basada en Django",
+          "Sistema de autenticación de usuarios",
+          "Operaciones CRUD básicas"
+        ],
+        "url": "https://github.com/luismdp05/sistema-gestion-academica"
+      },
+      {
+        "name": "React Tasks App",
+        "isActive": true,
+        "description": "Aplicación moderna de gestión de tareas construida con React, que presenta una interfaz limpia e intuitiva para la organización de tareas personales.",
+        "highlights": [
+          "Implementación de React + Vite",
+          "Tailwind CSS",
+          "Persistencia local de datos",
+          "Diseño responsive"
+        ],
+        "url": "https://adogdev.github.io/react-tasks-app/"
+      }
+    ]
+  }
+}

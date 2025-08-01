@@ -1,18 +1,41 @@
 ---
-import { work } from "../../../cv.json";
+import { useTranslations, getLangFromUrl } from "../../utils/i18n";
 import Section from "../Section.astro";
 import "../../styles/experience.css";
+
+const lang = getLangFromUrl(Astro.url);
+const t = useTranslations(lang);
+const { work } = Astro.props;
+
+interface WorkItem {
+  name: string;
+  startDate: string;
+  endDate: string | null;
+  position: string;
+  summary: string;
+  highlights: string[];
+}
 ---
 
-<Section title="Work Experience">
+<Section title={t("nav.experience")}>
   <div class="Experience">
     <ul class="flex flex-col gap-8">
       {
         work.map(
-          ({ name, startDate, endDate, position, summary, highlights }) => {
-            const startYear = new Date(startDate).getFullYear();
+          ({
+            name,
+            startDate,
+            endDate,
+            position,
+            summary,
+            highlights,
+          }: WorkItem) => {
+            const startYear =
+              new Date(startDate).getFullYear() || t("misc.unknown");
             const endYear =
-              endDate !== null ? new Date(endDate).getFullYear() : "Present";
+              endDate !== null
+                ? new Date(endDate).getFullYear() || t("misc.unknown")
+                : t("misc.present");
             const years = `${startYear} - ${endYear}`;
 
             return (
@@ -21,9 +44,7 @@ import "../../styles/experience.css";
                   <header class="flex justify-between items-start mb-1">
                     <div>
                       <h3 class="font-medium">{name}</h3>
-                      <h4 class="font-normal">
-                        {position}
-                      </h4>
+                      <h4 class="font-normal">{position}</h4>
                     </div>
 
                     <time class="text-sm">{years}</time>
@@ -31,7 +52,7 @@ import "../../styles/experience.css";
 
                   <footer class="flex flex-wrap gap-1">
                     <p>{summary}</p>
-                    {highlights.map((highlight) => {
+                    {highlights.map((highlight: string) => {
                       return (
                         <span class="rounded-md bg-gray-100 text-gray-700 text-xs font-medium px-2 py-1">
                           {highlight}
@@ -42,7 +63,7 @@ import "../../styles/experience.css";
                 </article>
               </li>
             );
-          }
+          },
         )
       }
     </ul>

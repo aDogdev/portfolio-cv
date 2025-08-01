@@ -1,0 +1,50 @@
+---
+import { getLangFromUrl, useTranslations } from "../../utils/i18n";
+import Layout from "../../layouts/Layout.astro";
+import Hero from "../../components/Sections/Hero.astro";
+import About from "../../components/Sections/About.astro";
+import Education from "../../components/Sections/Education.astro";
+import Experience from "../../components/Sections/Experience.astro";
+import Projects from "../../components/Sections/Projects.astro";
+import Skills from "../../components/Sections/Skills.astro";
+
+const lang = getLangFromUrl(Astro.url);
+const t = useTranslations(lang);
+
+// Default empty values for safety
+const defaultCV = {
+  basics: {
+    name: "",
+    label: "",
+    image: "",
+    email: "",
+    phone: "",
+    url: "",
+    summary: "",
+    location: { city: "", region: "" },
+    profiles: [],
+  },
+  work: [],
+  education: [],
+  skills: [],
+  projects: [],
+};
+
+// Safe destructuring with fallback to defaults
+const cv = t("cv") || defaultCV;
+const { basics, work, education, skills, projects } = {
+  ...defaultCV,
+  ...cv,
+};
+---
+
+<Layout>
+  <main class="p-16 mx-auto w-full">
+    <Hero basics={basics} t={t} />
+    <About summary={basics.summary} t={t} />
+    <Experience work={work} t={t} />
+    <Education education={education} t={t} />
+    <Skills skills={skills} t={t} />
+    <Projects projects={projects} t={t} />
+  </main>
+</Layout>

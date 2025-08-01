@@ -1,47 +1,61 @@
 ---
-import { projects } from "../../../cv.json";
+import { useTranslations, getLangFromUrl } from "../../utils/i18n";
 import Section from "../Section.astro";
 import "../../styles/projects.css";
+
+const lang = getLangFromUrl(Astro.url);
+const t = useTranslations(lang);
+const { projects } = Astro.props;
+
+interface Project {
+  name: string;
+  description: string;
+  url?: string;
+  highlights: string[];
+  isActive: boolean;
+}
 ---
 
-<Section title="Projects">
+<Section title={t("nav.projects")}>
   <div class="Projects">
     <ul class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 -mx-4">
       {
-        projects.map(({ name, description, url, highlights, isActive }) => {
-          return (
-            <li>
-              <article class="rounded-lg border border-gray-100 flex flex-col gap-4 p-4 h-full">
-                <header class="flex-1">
-                  <h3 class="mb-1">
-                    <a
-                      href={url}
-                      title={`View the project ${name}`}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      class="text-gray-900 hover:underline"
-                    >
-                      {name}
-                    </a>
+        projects.map(
+          ({ name, description, url, highlights, isActive }: Project) => {
+            return (
+              <li>
+                <article class="rounded-lg border border-gray-100 flex flex-col gap-4 p-4 h-full">
+                  <header class="flex-1">
+                    <h3 class="mb-1">
+                      <a
+                        href={url}
+                        title={`View the project ${name}`}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        class="text-gray-900 hover:underline"
+                      >
+                        {name}
+                      </a>
 
-                    {isActive && <span class="text-lime-500">&bull;</span>}
-                  </h3>
-                  <p class="text-xs leading-5 mb-1">{description}</p>
-                </header>
+                      {isActive && <span class="text-lime-500">&bull;</span>}
+                    </h3>
+                    <p class="text-xs leading-5 mb-1">{description}</p>
+                  </header>
 
-                <footer class="flex flex-wrap gap-1">
-                  {highlights.map((highlight) => {
-                    return (
-                      <span class="rounded-md bg-gray-100 text-gray-700 text-xs font-medium px-2 py-1">
-                        {highlight}
-                      </span>
-                    );
-                  })}
-                </footer>
-              </article>
-            </li>
-          );
-        })
+                  <footer class="flex flex-wrap gap-1">
+                    {highlights.map((highlight) => {
+                      return (
+                        <span class="rounded-md bg-gray-100 text-gray-700 text-xs font-medium px-2 py-1">
+                          {highlight}
+                        </span>
+                      );
+                    })}
+                  </footer>
+                </article>
+              </li>
+            );
+          },
+        )
       }
     </ul>
   </div>

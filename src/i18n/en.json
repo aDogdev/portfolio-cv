@@ -1,0 +1,179 @@
+{
+  "site": {
+    "title": "Portfolio & CV",
+    "description": "Personal portfolio and CV"
+  },
+  "nav": {
+    "about": "About",
+    "experience": "Experience",
+    "education": "Education",
+    "skills": "Skills",
+    "projects": "Projects"
+  },
+  "languages": {
+    "en": "English",
+    "es": "Spanish"
+  },
+  "misc": {
+    "grades": "Grades",
+    "present": "Present",
+    "unknown": "Unknown",
+    "social_title": "Visit {name}'s profile on {network}",
+    "email_title": "Send an email to {name} at {email}",
+    "phone_title": "Call {name} at {phone}"
+  },
+  "cv": {
+    "basics": {
+      "name": "Adrian Martínez",
+      "label": "Computer Science Engineer with over 2 years of experience in Full Stack development.",
+      "image": "./avatar.jpg",
+      "email": "adrianmg3008@gmail.com",
+      "phone": "+53 54110593",
+      "url": "https://github.com/aDogdev",
+      "summary": "Full Stack Developer passionate about creating scalable and efficient web solutions. I specialize in developing modern applications using technologies like Python, JavaScript, and TypeScript. With experience in agile methodologies and development best practices, I stand out for my continuous learning ability and commitment to technical excellence. I constantly seek new challenges that allow me to grow professionally while delivering value through innovative solutions.",
+      "location": {
+        "address": "3122A e/ 31 y Final",
+        "postalCode": "CA 94115",
+        "city": "Marianao",
+        "countryCode": "CU",
+        "region": "La Habana"
+      },
+      "profiles": [
+        {
+          "network": "GitHub",
+          "username": "aDogdev",
+          "url": "https://github.com/aDogdev"
+        },
+        {
+          "network": "LinkedIn",
+          "username": "adogdev",
+          "url": "https://linkedin.com/in/adogdev"
+        },
+        {
+          "network": "X",
+          "username": "aDogdev",
+          "url": "https://x.com/aDogdev"
+        }
+      ]
+    },
+    "work": [
+      {
+        "name": "Universidad de las Ciencias Informáticas",
+        "position": "Developer",
+        "url": "https://uci.cu",
+        "startDate": "2022-09",
+        "endDate": "2023-11",
+        "summary": "Development and implementation of a critical event management system for the supply chain. Led the architecture design and implementation of key functionalities using Python.",
+        "highlights": []
+      },
+      {
+        "name": "Merchise",
+        "position": "Developer",
+        "url": "https://www.merchise.org",
+        "startDate": "2024-03",
+        "endDate": null,
+        "summary": "Development of technological solutions using Python in a professional environment.",
+        "highlights": []
+      }
+    ],
+    "education": [
+      {
+        "institution": "Universidad de las Ciencias Informáticas",
+        "url": "https://uci.cu",
+        "area": "Computer Science Engineering",
+        "studyType": "Engineering",
+        "startDate": "2018-09",
+        "endDate": "2023-12",
+        "score": "4.6",
+        "courses": ["DB1101 - Basic SQL"]
+      }
+    ],
+    "skills": [
+      {
+        "name": "Nodejs"
+      },
+      {
+        "name": "Expressjs"
+      },
+      {
+        "name": "JavaScript"
+      },
+      {
+        "name": "TypeScript"
+      },
+      {
+        "name": "HTML"
+      },
+      {
+        "name": "CSS"
+      },
+      {
+        "name": "Tailwind"
+      },
+      {
+        "name": "Git"
+      },
+      {
+        "name": "Docker"
+      },
+      {
+        "name": "React"
+      },
+      {
+        "name": "Python"
+      },
+      {
+        "name": "Odoo"
+      }
+    ],
+    "projects": [
+      {
+        "name": "nodetsep",
+        "isActive": true,
+        "description": "A CLI to quickly initialize Node.js projects with TypeScript, ts-node-dev, ESLint, and Prettier preconfigured.",
+        "highlights": [
+          "Published on NPM",
+          "Command Line Interface",
+          "Development workflow automation",
+          "Project scaffolding tool"
+        ],
+        "url": "https://www.npmjs.com/package/nodetsep"
+      },
+      {
+        "name": "Extraordinary Events Management Module",
+        "isActive": false,
+        "description": "Comprehensive system for detecting, tracking, and resolving critical events in the supply chain. Implemented with a modular and scalable architecture.",
+        "highlights": [
+          "Final course project - Maximum grade",
+          "Modular architecture",
+          "Python backend implementation",
+          "Integration with existing systems"
+        ]
+      },
+      {
+        "name": "Academic Management System",
+        "isActive": false,
+        "description": "Basic web application built with Django 4.2 for managing student and teacher registrations in an academic environment.",
+        "highlights": [
+          "Final year project - Maximum grade",
+          "Django-based web application",
+          "User authentication system",
+          "Basic CRUD operations"
+        ],
+        "url": "https://github.com/luismdp05/sistema-gestion-academica"
+      },
+      {
+        "name": "React Tasks App",
+        "isActive": true,
+        "description": "Modern task management application built with React, featuring a clean and intuitive interface for personal task organization.",
+        "highlights": [
+          "React + Vite implementation",
+          "Tailwind CSS styling",
+          "Local storage integration",
+          "Responsive design"
+        ],
+        "url": "https://adogdev.github.io/react-tasks-app/"
+      }
+    ]
+  }
+}
